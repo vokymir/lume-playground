@@ -1,0 +1,28 @@
+name: Build website from main branch to gh-pages.
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+
+      - name: Build site
+        run: deno task build
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _site
+          branch: gh-pages
+          clean: true # Automatically remove deleted files from the deployment
