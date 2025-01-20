@@ -1,1 +1,95 @@
-<h1>NAV</h1>
+<!-- Design created by Claude.AI -->
+
+<nav class="container-fluid">
+  <ul>
+    <li><strong> <a href="{{ "/" |> url }}"> {{ site.title || "My Site" }} </a> </strong></li>
+  </ul>
+  <ul>
+
+{{ function renderTree(items, prefix) }}
+    {{ for item of items }}
+      {{ if item }}
+        <li>
+          {{ if item.data.url }}
+            <a href="{{ item.data.url }}">
+            {{ prefix + item.data.title }}
+            </a>
+          {{ /if }}
+          {{ if item.children }}
+            {{ renderTree(item.children, "-") }}
+          {{ /if }}
+        </li>
+      {{ /if }}
+    {{ /for }}
+{{ /function }}
+
+{{ renderTree(nav.menu("/post/").children, "") }}
+
+
+    <li>
+      <a href="#" role="button" id="theme-switcher">
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          width="20" 
+          height="20" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"
+        >
+          <circle cx="12" cy="12" r="5"/>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<script>
+  const themeSwitch = document.getElementById('theme-switcher');
+  
+  if (themeSwitch) {
+    themeSwitch.addEventListener('click', (e) => {
+      e.preventDefault();
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  }
+
+  // Set initial theme from localStorage or system preference
+  const savedTheme = localStorage.getItem('theme') || 
+    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+  nav {
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--primary);
+  }
+
+  nav strong {
+    color: var(--primary);
+  }
+
+  nav a.active {
+    background-color: var(--primary);
+    color: var(--primary-inverse);
+  }
+
+  #theme-switcher {
+    padding: 0.5rem;
+    margin: -0.5rem;
+    line-height: 1;
+  }
+
+  #theme-switcher:hover {
+    opacity: 0.8;
+  }
+</style>
