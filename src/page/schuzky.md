@@ -1,3 +1,6 @@
+---
+title: Schůzky
+---
 ## O schůzkách
 
 Na pravidelné schůzky se scházíme každé úterý od pěti do sedmi hodin odpoledne. Začínáme **společným nástupem**, během kterého pověsíme vlajku a dozvíme se o [blížících se akcích](https://prestice.royalrangers.cz/prespavackyy/). Následují tři chvály, křesťanské písničky, většinou jedna dětská ukazovací (např. [Muž moudrý](https://zpevnik.proscholy.cz/pisen/2180/muz-moudry)). Po nich si zahrajeme hru, trvá přibližně půl hodiny a pokaždé si ji připravuje někdo jiný, takže se i hodně liší. Od klasické vybíjené a rybiček, přes [larpové bitvy](https://cs.wikipedia.org/wiki/Larp), po složitější šifrovací hry, nebo jednoduché [escape roomky](https://cs.wikipedia.org/wiki/%C3%9Anikov%C3%A1_hra).

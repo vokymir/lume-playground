@@ -1,3 +1,7 @@
+---
+title: Přespávačky
+---
+
 ## O přespávačkách
 
 Každý měsíc máme společnou akci, kterým říkáme přespávačky. Jednou za dva měsíce je přespávačka pro děti do 14 let (Kids, Discovery, Adventure) a jednou pro mládežníky 15+ (Expedition) ([Víc o věkových skupinách](https://prestice.royalrangers.cz/schuzkyy/#vekove_skupiny)).

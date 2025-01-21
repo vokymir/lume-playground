@@ -1,3 +1,6 @@
+---
+title: Tábory
+---
 Přes léto pořádáme několik táborů. Některé jsou příměstské, jiné pobytové. Některé jsou ve městě, některé v přírodě. Některé jsou pro mladší, jiné pro starší děti.
 
 Dříve jsme měli jen jeden tábor, ale jak naše hlídka rostla, rozdělil se na dva: malý tábor v Přešticích na faře a velký tábor v Habarticích, později na Myslívě. To jsou naše pobytové tábory, i když na malý tábor nabízíme po domluvě i příměstskou variantu.

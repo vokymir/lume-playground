@@ -1,3 +1,6 @@
+---
+title: Podpořit
+---
 ## Děkujeme, že zvažujete podporu
 
 Vážíme si toho. Způsobů jak nás můžete podpořit je víc, nejzřejmějším je asi finanční dar. Snažíme se udržet členské poplatky i ceny akcí na minimu, aby byly dostupné pro **všechny** děti z okolí. Darem přispějete k tomu, abychom takto mohli fungovat i nadále.  

@@ -1,5 +1,6 @@
-# O nás
-
+---
+title: O nás
+---
 ## Royal Rangers v ČR
 
 Jsme mezinárodní nezisková křesťanská organizace, která pracuje s dětmi a mládeží školního věku. Nabízíme dětem různorodý program pro jejich rozvoj, učíme je starat se o sebe i o druhé. A to vše dobrodružným, bezpečným, zábavným a přátelským způsobem. Snažíme se být dobrou partou, kdy jsou všichni rádi spolu a rádi se vrací.  

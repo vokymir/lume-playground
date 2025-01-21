@@ -1,3 +1,6 @@
+---
+title: Kalendář
+---
 ## Jak si kalendář přidat?
 
 V kalendáři nahoře v pravém spodním rohu klikněte na symbol plus, nebo na tento [odkaz](https://calendar.google.com/calendar/u/0/r?cid=c_n6moegca8nfk5fipbul9k5912o@group.calendar.google.com). Potvrďte, že si chcete kalendář přidat.  
