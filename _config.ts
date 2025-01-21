@@ -1,6 +1,7 @@
 import lume from "lume/mod.ts";
 import basePath from "lume/plugins/base_path.ts";
 import nav from "lume/plugins/nav.ts"; // used in _components/header.vto
+import relations from "lume/plugins/relations.ts";
 
 const site = lume({
     src: "src",
@@ -16,7 +17,14 @@ site.preprocess([".md"], (pages) => {
 
 
 site.use(basePath())
-    .use(nav());
+    .use(nav())
+    .use(relations({
+        extensions: [".md", ".html"],
+        foreignKeys: {
+            page: "page_id",
+            author: "author_id",
+        }
+    }));
 
 // Include the pico style
 site.copy("/assets/css/pico.min.css");
