@@ -1,5 +1,5 @@
 <!-- Design created by Claude.AI -->
-
+<header>
 <nav class="container-fluid">
   <ul>
     <li><strong> <a href="{{ "/" |> url }}"> {{ site.title || "My Site" }} </a> </strong></li>
@@ -23,7 +23,7 @@
     {{ /for }}
 {{ /function }}
 
-{{ renderTree(nav.menu("/post/").children, "") }}
+{{ renderTree(nav.menu("/page/").children, "") }}
 
 
     <li>
@@ -93,3 +93,4 @@
     opacity: 0.8;
   }
 </style>
+</header>
