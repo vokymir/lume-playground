@@ -1,6 +1,6 @@
 import lume from "lume/mod.ts";
 import basePath from "lume/plugins/base_path.ts";
-import nav from "lume/plugins/nav.ts";
+import nav from "lume/plugins/nav.ts"; // used in _components/header.vto
 
 const site = lume({
     src: "src",
