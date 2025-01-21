@@ -19,7 +19,7 @@ site.use(basePath())
     .use(nav());
 
 // Include the pico style
-site.copy("/assets/css/pico-main/css/pico.min.css");
+site.copy("/assets/css/pico.min.css");
 
 site.ignore("/assets/css/pico-main/LICENSE.md", "/assets/css/pico-main/README.md");
 
