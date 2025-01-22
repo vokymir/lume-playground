@@ -1,9 +1,8 @@
 ---
 title: Další akce
-author_id: pavel
 ---
 
-# Další akce: {{ author.name }}
+# Další akce: 
 
 Každý týden máme schůzku, jednou měsíčně přespávačku a v létě pět táborů. To ale není zdaleka všechno, co děláme.
 
