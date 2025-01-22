@@ -1,0 +1,41 @@
+---
+layout: layouts/centered.vto
+templateEngine: ["vto", "md"]
+---
+featured image:
+<img src="{{featured_img}}" width="200" />
+
+this is the title: {{title }}
+
+date of added: {{ date }}
+
+Who is the base leader:
+{{ comp.find_info({what:site.base_leader})}}
+
+Who is the camp leader:
+{{ leader[0].name}}
+
+Who is the camp leader to be contacted:
+{{ leader[1].name}} ({{leader[1].full_name}}): {{leader[1].email}} / {{leader[1].tel}}
+
+Camp (sleep) type:
+{{ for ct of camp_type}}
+    {{ if ct.id == sleep_type}}
+        {{echo ct.name}}
+    {{/if}}
+{{/for}}
+
+Price: {{ price}} Kc
+
+[Gallery]( {{gallery_url}} )
+
+Date of start:
+{{ date_start |> date("HUMAN_DATE") }}
+
+Date of end:
+{{ date_end |> date("HUMAN_DATE") }}
+
+author:
+{{ author.name}}
+
+{{ content }}
