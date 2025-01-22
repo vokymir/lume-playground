@@ -1,16 +1,24 @@
+# type of files, for relations plugin
 type: camp
+# layout just for camps
+layout: layouts/camp.vto
+# featured image fallback
+featured_img: https://prestice.royalrangers.cz/wp-content/uploads/tabory-fallback.jpg
+# gallery fallback
+gallery_url: https://eu.zonerama.com/prrestice/1402979
+# type of sleeping mode on camp, don't change id's
 camp_type:
-  - id: primestsky
+  - id: prim
     name: Primestský tábor
     description: >
       Primestský tábor je určený pre deti vo veku 6-15 rokov. Deti sa zúčastňujú rôznych aktivít, ktoré sú zamerané na zlepšenie ich schopností a zručností. Tábor sa koná v prírode, kde deti majú možnosť spoznať nových priateľov a stráviť príjemný čas.
   
-  - id: pobytovy
+  - id: pobyt
     name: Pobytove tábory
     description: >
       Pobytove tábory sú určené pre deti vo veku 6-15 rokov. Deti sa zúčastňujú rôznych aktivít, ktoré sú zamerané na zlepšenie ich schopností a zručností. Tábor sa koná v prírode, kde deti majú možnosť spoznať nových priateľov a stráviť príjemný čas.
   
-  - id: kombinace
+  - id: kombo
     name: Kombinovaný přístup
     description: >
       Podle volby jednotlivce po domluvě, buď pobytové, anebo příměstské.
