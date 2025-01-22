@@ -12,11 +12,11 @@ author_id: 3
 {{ set author_arr = [author]}}
 {{/if}}
 
-{{ for aut of author_arr }}
-    {{ if aut.title}}
-    {{ echo aut.title }}
+{{ for a of author_arr }}
+    {{ if a.title}}
+    {{ echo a.title }}
     {{ /if}}
-    {{ echo aut.name }}
+    {{ echo a.name }}
 {{ /for }}
 
 
