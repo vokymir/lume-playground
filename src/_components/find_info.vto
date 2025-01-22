@@ -1,0 +1,8 @@
+{{# create multiple versions based on type - if necessary #}}
+
+{{ for pg of search.pages("type=leader")}}
+    {{ if pg.id == what }}
+        {{ pg.name}}
+        ![]({{ pg.img}})
+    {{/if}}
+{{/for}}
