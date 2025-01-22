@@ -4,6 +4,7 @@ import nav from "lume/plugins/nav.ts"; // used in _components/header.vto
 import relations from "lume/plugins/relations.ts";
 import date from "lume/plugins/date.ts";
 import { cs } from "npm:date-fns/locale/cs";
+import pagefind from "lume/plugins/pagefind.ts";
 
 const site = lume({
     src: "src",
@@ -31,7 +32,8 @@ site.use(basePath())
     }))
     .use(date({
         locales: { cs },
-    }));
+    }))
+    .use(pagefind());
 
 // Include the pico style
 site.copy("/assets/css/pico.min.css");
