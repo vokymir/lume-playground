@@ -23,6 +23,7 @@ site.use(basePath())
         foreignKeys: {
             basic_page: "page_id",
             author: "author_id",
+            leader: "leader_id",
         }
     }));
 
