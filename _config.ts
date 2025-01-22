@@ -28,6 +28,8 @@ site.use(basePath())
             author: "author_id",
             leader: "leader_id",
             camp: "camp_id",
+            grant: "grant_id",
+            sponsor: "sponsor_id",
         }
     }))
     .use(date({
