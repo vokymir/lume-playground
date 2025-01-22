@@ -4,9 +4,68 @@
   <ul>
     <li><strong> <a href="{{ "/" |> url }}"> {{ site.title || "My Site" }} </a> </strong></li>
   </ul>
-  
-  <div id="search"></div>
+ <!-- Search --> 
+<button 
+      id="search-trigger"
+      class="p-2 transition-colors rounded-full hover:bg-gray-100" 
+      aria-label="Search"
+    >
+      <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        width="24" 
+        height="24" 
+        viewBox="0 0 24 24" 
+        fill="none" 
+        stroke="currentColor" 
+        stroke-width="2" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        class="w-5 h-5"
+      >
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </button>
+<div id="search-overlay" style="display: none;">
+    <div id="search"></div>
+</div>
+<!-- Search style -->
+<style>
+ #search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+  }
 
+  #search {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+</style>
+<!-- Search script -->
+<script>
+document.getElementById('search-trigger').onclick = function() {
+    document.getElementById('search-overlay').style.display = 'block';
+    //new PagefindUI({ element: "#search" });
+  }
+
+  document.getElementById('search-overlay').onclick = function(e) {
+    if (e.target === this) {
+      this.style.display = 'none';
+    }
+  }
+</script>
   <ul>
 
 {{ function renderTree(items, prefix) }}
