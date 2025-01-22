@@ -1,7 +1,8 @@
 ---
 title: Další akce
 ---
-# Další akce
+
+# Další akce: 
 
 Každý týden máme schůzku, jednou měsíčně přespávačku a v létě pět táborů. To ale není zdaleka všechno, co děláme.
 
