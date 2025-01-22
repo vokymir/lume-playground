@@ -51,13 +51,19 @@
     background: white;
     padding: 20px;
     border-radius: 8px;
+    border: none;
+    overflow: hidden;
   }
+
+  form[role="search"]{
+  flex-direction: column;
+  }
+
 </style>
 <!-- Search script -->
 <script>
 document.getElementById('search-trigger').onclick = function() {
     document.getElementById('search-overlay').style.display = 'block';
-    //new PagefindUI({ element: "#search" });
   }
 
   document.getElementById('search-overlay').onclick = function(e) {

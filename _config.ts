@@ -33,7 +33,12 @@ site.use(basePath())
     .use(date({
         locales: { cs },
     }))
-    .use(pagefind());
+    .use(pagefind({
+        ui: {
+            showImages: true,
+            resetStyles: false,
+        }
+    }));
 
 // Include the pico style
 site.copy("/assets/css/pico.min.css");
