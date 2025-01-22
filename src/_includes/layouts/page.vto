@@ -2,5 +2,9 @@
 title: Layout for pages.
 layout: "layouts/centered.vto"
 ---
+{{if author}}
+{{ if author.name}}
 {{ author.name }}
+{{/if}}
+{{ /if}}
 {{ content }}

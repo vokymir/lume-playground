@@ -1,0 +1,18 @@
+---
+layout: layouts/centered.vto
+---
+<article>
+  {{ content }}
+
+  <h2>Articles created:</h2>
+
+  <ul>
+  {{ for item of article }}
+    <li>
+      <a href="{{ item.url }}">
+        {{ item.title }}
+      </a>
+    </li>
+  {{ /for }}
+  </ul>
+</article>

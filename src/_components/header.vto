@@ -7,12 +7,13 @@
   <ul>
 
 {{ function renderTree(items, prefix) }}
+    {{ if items }}
     {{ for item of items }}
       {{ if item }}
         <li>
           {{ if item.data.url }}
             <a href="{{ item.data.url }}">
-            {{ prefix + item.data.title }}
+            {{ prefix + item.data.title || "generic link" }}
             </a>
           {{ /if }}
           {{ if item.children }}
@@ -21,6 +22,7 @@
         </li>
       {{ /if }}
     {{ /for }}
+    {{ /if }}
 {{ /function }}
 
 {{ renderTree(nav.menu("/page/").children, "") }}

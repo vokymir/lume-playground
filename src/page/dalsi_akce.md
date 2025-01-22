@@ -1,9 +1,24 @@
 ---
 title: Další akce
-author_id: pavel
+id: 0
+author_id: 3 
 ---
 
-# Další akce: {{ author.name }}
+# Další akce: {{if Array.isArray(author) }}
+{{ set author_arr = author}}
+{{ echo "not a single author" }}
+{{ else }}
+{{ echo "single author"}}
+{{ set author_arr = [author]}}
+{{/if}}
+
+{{ for aut of author_arr }}
+    {{ if aut.title}}
+    {{ echo aut.title }}
+    {{ /if}}
+    {{ echo aut.name }}
+{{ /for }}
+
 
 Každý týden máme schůzku, jednou měsíčně přespávačku a v létě pět táborů. To ale není zdaleka všechno, co děláme.
 
