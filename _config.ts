@@ -21,7 +21,7 @@ site.use(basePath())
     .use(relations({
         extensions: [".md", ".html"],
         foreignKeys: {
-            page: "page_id",
+            basic_page: "page_id",
             author: "author_id",
         }
     }));
