@@ -8,3 +8,7 @@ Dříve jsme měli jen jeden tábor, ale jak naše hlídka rostla, rozdělil se 
 Po pandemii koronaviru nás oslovila [Místní akční skupina Aktivios](https://www.mas-aktivios.cz/) a od té doby ve spolupráci s nimi pořádáme v Přešticích příměstské tábory. Druhý týden v červenci je to dvoj-tábor Larp/Kreativní pro chlapce i děvčata, a čtvrtý týden v červenci tábor Letopisy Narnie, podle stejnojmenné knižní série.
 
 ![](https://prestice.royalrangers.cz/wp-content/uploads/P7100060_Original-1024x576.jpeg)
+
+{{ for c of search.pages("type=camp")}}
+    {{ comp.card.camp({camp: c})}}
+{{/for}}
