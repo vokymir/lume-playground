@@ -1,5 +1,6 @@
 ---
 title: Tábory
+id: tabory
 ---
 Přes léto pořádáme několik táborů. Některé jsou příměstské, jiné pobytové. Některé jsou ve městě, některé v přírodě. Některé jsou pro mladší, jiné pro starší děti.
 

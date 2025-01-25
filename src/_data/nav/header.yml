@@ -1,0 +1,13 @@
+  - type: basic_page
+    id: tabory
+
+  - type: camp
+    id: narnie2025 
+    message: Narnie 2025
+
+  - nest:
+    - type: camp
+      id: narnie2025
+
+    - type: basic_page
+      id: tabory
