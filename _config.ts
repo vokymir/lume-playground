@@ -5,6 +5,7 @@ import relations from "lume/plugins/relations.ts";
 import date from "lume/plugins/date.ts";
 import { cs } from "npm:date-fns/locale/cs";
 import pagefind from "lume/plugins/pagefind.ts";
+import robots from "lume/plugins/robots.ts";
 
 const site = lume({
     src: "src",
@@ -41,6 +42,10 @@ site.use(basePath())
             showImages: true,
             resetStyles: false,
         }
+    }))
+    .use(robots({
+        allow: [],
+        disallow: "*",
     }));
 
 // Include the pico style
