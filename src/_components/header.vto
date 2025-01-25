@@ -1,103 +1,65 @@
-<!-- Design created by Claude.AI -->
 <header>
 <nav class="container-fluid">
   <ul>
     <li><strong> <a href="{{ "/" |> url }}"> {{ site.title || "My Site" }} </a> </strong></li>
   </ul>
  <!-- Search --> 
-<button 
-      id="search-trigger"
-      aria-label="Search"
-    >
-      <svg 
-        xmlns="http://www.w3.org/2000/svg" 
-        width="24" 
-        height="24" 
-        viewBox="0 0 24 24" 
-        fill="none" 
-        stroke="currentColor" 
-        stroke-width="2" 
-        stroke-linecap="round" 
-        stroke-linejoin="round"
-        class="w-5 h-5"
-      >
-        <circle cx="11" cy="11" r="8"></circle>
-        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-      </svg>
-    </button>
-<div id="search-overlay" style="display: none;">
-    <div id="search"></div>
-</div>
-<!-- Search style -->
-<style>
-#search-trigger{
-  background: none;
-  border: none;
-}
- #search-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-  }
+    <button 
+          id="search-trigger"
+          aria-label="Search"
+        >
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="24" 
+            height="24" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            stroke-width="2" 
+            stroke-linecap="round" 
+            stroke-linejoin="round"
+            class="w-5 h-5"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+    <div id="search-overlay" style="display: none;">
+        <div id="search"></div>
+    </div>
 
-  #search {
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 600px;
-    background: white;
-    padding: 20px;
-    --pico-group-box-shadow-focus-with-input: 0;
-  }
-
-  form[role="search"]{
-  flex-direction: column;
-  }
-
-</style>
-<!-- Search script -->
-<script>
-document.getElementById('search-trigger').onclick = function() {
-    document.getElementById('search-overlay').style.display = 'block';
-  }
-
-  document.getElementById('search-overlay').onclick = function(e) {
-    if (e.target === this) {
-      this.style.display = 'none';
-    }
-  }
-</script>
+  <!-- Navigation --->
   <ul>
-{{ for item of nav.header }}
-  {{ if item.nest }}
-    {{ for subitem of item.nest }}  
-      {{ for page of search.pages() }}
-        {{ if page.type == subitem.type && page.id == subitem.id }}
-        <li>
-          <a href="{{ page.url }}"> (>) {{ subitem.message || page.title }} </a>
+   {{ for item of menu.header }}
+      {{ if item.nest }}
+        <li> <!-- Uses PICO default styling -->
+          <details class="dropdown">
+          <summary>
+            {{ item.message || "Zobrazit" }}
+          </summary>
+          <ul dir="rtl"> <!-- RTL to prevent overflow, I hope. -->
+            {{ for subitem of item.nest }} {{# Could be a nested function, not yet. Could be a component, not yet. #}}
+              {{ for page of search.pages() }}
+                {{ if page.type == subitem.type && page.id == subitem.id }}
+                  <li><a href="{{ page.url }}">{{ subitem.message || page.title }}</a></li>
+                {{ /if }}
+              {{ /for }}
+            {{ /for }}
+          </ul>
+          </details>
         </li>
-        {{ /if }}
-      {{ /for }}
-    {{ /for }}
-  {{ else }}
-    {{ for page of search.pages() }}
-      {{ if page.type == item.type && page.id == item.id }}
-      <li>
-        <a href="{{ page.url }}"> {{ item.message || page.title }} </a>
-      </li>
+      {{ else }}
+        {{ for page of search.pages() }}
+          {{ if page.type == item.type && page.id == item.id }}
+            <li><a href="{{ page.url }}">{{ item.message || page.title }}</a></li>
+          {{ /if }}
+        {{ /for }}
       {{ /if }}
     {{ /for }}
-  {{ /if}}
-{{ /for }}
+    
     <li>
       <a href="#" role="button" id="theme-switcher">
-        <svg 
+       <svg 
           xmlns="http://www.w3.org/2000/svg" 
           width="20" 
           height="20" 
@@ -116,50 +78,6 @@ document.getElementById('search-trigger').onclick = function() {
   </ul>
 </nav>
 
-<script>
-  const themeSwitch = document.getElementById('theme-switcher');
-  
-  if (themeSwitch) {
-    themeSwitch.addEventListener('click', (e) => {
-      e.preventDefault();
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-      
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-    });
-  }
+<script type="text/javascript" src= "/assets/js/header.js"></script>
 
-  // Set initial theme from localStorage or system preference
-  const savedTheme = localStorage.getItem('theme') || 
-    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  document.documentElement.setAttribute('data-theme', savedTheme);
-</script>
-
-<style>
-  nav {
-    padding: 1rem 0;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid var(--primary);
-  }
-
-  nav strong {
-    color: var(--primary);
-  }
-
-  nav a.active {
-    background-color: var(--primary);
-    color: var(--primary-inverse);
-  }
-
-  #theme-switcher {
-    padding: 0.5rem;
-    margin: -0.5rem;
-    line-height: 1;
-  }
-
-  #theme-switcher:hover {
-    opacity: 0.8;
-  }
-</style>
 </header>

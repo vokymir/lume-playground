@@ -1,0 +1,7 @@
+:root{
+    --primary: var(--pico-primary);
+    --secondary: var(--pico-secondary);    
+    --text: var(--pico-color);
+    --primary-inverse: var(--pico-primary-inverse);
+    --background: var(--pico-background-color);
+}
