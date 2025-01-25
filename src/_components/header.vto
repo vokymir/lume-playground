@@ -74,27 +74,27 @@ document.getElementById('search-trigger').onclick = function() {
   }
 </script>
   <ul>
-
-{{ function renderTree(items, prefix) }}
-    {{ for item of items }}
-      {{ if item }}
+{{ for item of nav.header }}
+  {{ if item.nest }}
+    {{ for subitem of item.nest }}  
+      {{ for page of search.pages() }}
+        {{ if page.type == subitem.type && page.id == subitem.id }}
         <li>
-          {{ if item.data.url }}
-            <a href="{{ item.data.url }}">
-            {{ prefix + item.data.title }}
-            </a>
-          {{ /if }}
-          {{ if item.children }}
-            {{ renderTree(item.children, "-") }}
-          {{ /if }}
+          <a href="{{ page.url }}"> (>) {{ subitem.message || page.title }} </a>
         </li>
+        {{ /if }}
+      {{ /for }}
+    {{ /for }}
+  {{ else }}
+    {{ for page of search.pages() }}
+      {{ if page.type == item.type && page.id == item.id }}
+      <li>
+        <a href="{{ page.url }}"> {{ item.message || page.title }} </a>
+      </li>
       {{ /if }}
     {{ /for }}
-{{ /function }}
-
-{{ renderTree(nav.menu("/page/").children, "") }}
-
-
+  {{ /if}}
+{{ /for }}
     <li>
       <a href="#" role="button" id="theme-switcher">
         <svg 
