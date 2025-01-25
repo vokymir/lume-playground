@@ -5,7 +5,8 @@
     id: narnie2025 
     message: Narnie 2025
 
-  - nest:
+  - message: haha
+    nest:
     - type: camp
       id: narnie2025
 
