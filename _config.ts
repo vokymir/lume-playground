@@ -7,6 +7,7 @@ import { cs } from "npm:date-fns/locale/cs";
 import pagefind from "lume/plugins/pagefind.ts";
 import robots from "lume/plugins/robots.ts";
 import sitemap from "lume/plugins/sitemap.ts";
+import checkUrls from "lume/plugins/check_urls.ts";
 
 const site = lume({
     src: "src",
@@ -48,7 +49,10 @@ site.use(basePath())
         allow: [],
         disallow: "*",
     }))
-    .use(sitemap());
+    .use(sitemap())
+    .use(checkUrls({
+        strict: true,
+    }));
 
 // Include the pico style
 site.copy("/assets/css/pico.min.css");

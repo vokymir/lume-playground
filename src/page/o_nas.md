@@ -17,7 +17,7 @@ Jsme otevřeni všem dětem, které se chtějí zapojit, bez rozdíly pohlaví, 
 
 Naše hlídka vznikla v září 2013, založil ji Vláďa Přenosil při [sboru ČCE v Přešticích](https://prestice.evangnet.cz/). Číslo naší přední hlídky je **55** a patříme tak k mladším hlídkám v České republice. Připravujeme letní tábory, víkendové přespávačky a každé úterý se scházíme na schůzkách.  
 Od roku 2019 je hlavním vedoucím Kryštof Veselovský, protože Vláďa se odstěhoval. Z dětí, které chodily do royálů před deseti lety jsou dneska vedoucí a většina z nich se aktivně podílí na přípravě a fungování naší hlídky.  
-Aktuálně se nás na schůzkách schází kolem třiceti a podobný počet nás jezdí i na přespávačky, které jsou každý druhý měsíc (viz [kalendář](/kalendar)). Rádi vás na některé akci uvidíme!
+Aktuálně se nás na schůzkách schází kolem třiceti a podobný počet nás jezdí i na přespávačky, které jsou každý druhý měsíc (viz [kalendář](/page/kalendar)). Rádi vás na některé akci uvidíme!
 
 ![](https://prestice.royalrangers.cz/wp-content/uploads/DSCF5986_Original-768x528.jpeg)
 
