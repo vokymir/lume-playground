@@ -10,12 +10,13 @@ import sitemap from "lume/plugins/sitemap.ts";
 import checkUrls from "lume/plugins/check_urls.ts";
 
 const site = lume({
-    src: "src",
-    location: new URL("https://vokymir.github.io/lume-playground/"),
+    src: "src", // the root folder for site
+    location: new URL("https://vokymir.github.io/lume-playground/"), // if gonna live in subfolder
 });
 
 
 // Every MD file accepts VTO variables.
+// Very useful to make the site more dynamic.
 site.preprocess([".md"], (pages) => {
     for (const page of pages){
         page.data.templateEngine = ["vto", "md"];
@@ -23,9 +24,9 @@ site.preprocess([".md"], (pages) => {
 });
 
 
-site.use(basePath())
-    .use(nav())
-    .use(relations({
+site.use(basePath()) // prepends site.location from above to paths
+    .use(nav()) // useful for nav, currently not used but will be shortly (probably)
+    .use(relations({ // creating (bi)directional relations
         extensions: [".md", ".html"],
         foreignKeys: {
             basic_page: "page_id",
@@ -39,18 +40,18 @@ site.use(basePath())
     .use(date({
         locales: { cs },
     }))
-    .use(pagefind({
+    .use(pagefind({ // search the website
         ui: {
             showImages: true,
             resetStyles: false,
         }
     }))
-    .use(robots({
+    .use(robots({ // crawling is disabled
         allow: [],
         disallow: "*",
     }))
-    .use(sitemap())
-    .use(checkUrls({
+    .use(sitemap()) // useful to robots
+    .use(checkUrls({ // check broken URLs on build
         strict: true,
         external: false, // set it to true occasionally to check for broken external links - slows the build down a lot
     }));
@@ -58,6 +59,7 @@ site.use(basePath())
 // Include the pico style
 site.copy("/assets/css/pico.min.css");
 
+// Don't create pages for these.
 site.ignore("/assets/css/pico-main/LICENSE.md", "/assets/css/pico-main/README.md");
 
 export default site;
