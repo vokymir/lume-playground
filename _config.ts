@@ -52,6 +52,7 @@ site.use(basePath())
     .use(sitemap())
     .use(checkUrls({
         strict: true,
+        external: false, // set it to true occasionally to check for broken external links - slows the build down a lot
     }));
 
 // Include the pico style
