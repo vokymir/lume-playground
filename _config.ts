@@ -8,6 +8,7 @@ import pagefind from "lume/plugins/pagefind.ts";
 
 const site = lume({
     src: "src",
+    location: new URL("https://vokymir.github.io/lume-playground/"),
 });
 
 
