@@ -8,6 +8,8 @@ import pagefind from "lume/plugins/pagefind.ts";
 import robots from "lume/plugins/robots.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import checkUrls from "lume/plugins/check_urls.ts";
+import lightningCss from "lume/plugins/lightningcss.ts"
+import esbuild from "lume/plugins/esbuild.ts";
 
 const site = lume({
     src: "src", // the root folder for site
@@ -54,10 +56,9 @@ site.use(basePath()) // prepends site.location from above to paths
     .use(checkUrls({ // check broken URLs on build
         strict: true,
         external: false, // set it to true occasionally to check for broken external links - slows the build down a lot
-    }));
-
-// Include the pico style
-site.copy("/assets/css/pico.min.css");
+    }))
+    .use(lightningCss())
+    .use(esbuild());
 
 // Don't create pages for these.
 site.ignore("/assets/css/pico-main/LICENSE.md", "/assets/css/pico-main/README.md");
