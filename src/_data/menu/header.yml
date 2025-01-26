@@ -1,14 +1,43 @@
+- message: Finance
+  nest:
   - type: basic_page
-    id: tabory
+    id: dotace
+    message: Dotace
 
-  - type: camp
-    id: narnie2025 
-    message: Narnie 2025
+  - type: basic_page
+    id: jak_podporit
+    message: Jak podpořit
 
-  - message: haha
-    nest:
-    - type: camp
-      id: narnie2025
+- message: Pořádáme
+  nest:
+  - type: basic_page
+    id: schuzky
+    message: Schůzky
+  
+  - type: basic_page
+    id: prespavacky
+    message: Přespávačky
 
-    - type: basic_page
-      id: tabory
+  - type: basic_page
+    id: tabory 
+    message: Letní tábory
+  
+  - type: basic_page
+    id: dalsi_akce
+    message: Další akce
+
+  - type: basic_page
+    id: kalendar
+    message: Kalendář
+
+- type: basic_page
+  id: contact
+  message: Kontakt
+
+- type: basic_page
+  id: about_us
+  message: O nás
+
+- type: basic_page
+  id: schuzky
+  message: Přijďte na
