@@ -43,5 +43,6 @@ These are mainly pointers for me, for the future me which would pick up after a 
   - detect [broken links](https://lume.land/plugins/check_urls/) and report to the console on build
   - [date](https://lume.land/plugins/date/) formats, check which to use on link
   - correct [path](https://lume.land/plugins/base_path/)
+- Header: uses _data/menu to create menu dynamically
 
 Not that bad, aye. See ya.
