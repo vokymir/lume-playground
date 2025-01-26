@@ -30,6 +30,7 @@
 
   <!-- Navigation --->
   <ul>
+  <menu role="menu">
    {{ for item of menu.header }}
       {{ if item.nest }}
         <li> <!-- Uses PICO default styling -->
@@ -56,7 +57,7 @@
         {{ /for }}
       {{ /if }}
     {{ /for }}
-    
+    </menu>
     <li>
       <a href="#" role="button" id="theme-switcher">
        <svg 

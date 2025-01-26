@@ -44,3 +44,14 @@ THEME SWITCHER
   #theme-switcher:hover {
     opacity: 0.8;
   }
+
+/*
+RESPONSIVE MENU
+goto: https://github.com/picocss/pico/discussions/343
+*/
+@media (max-width: 768px){
+  :where(menu,[role=menu]){
+    display: flex;
+    flex-direction: column;
+  }
+}
