@@ -1,5 +1,6 @@
 ---
 title: Další akce
+id: dalsi_akce
 ---
 
 # Další akce: 

@@ -1,5 +1,6 @@
 ---
 title: Schůzky
+id: schuzky
 ---
 ## O schůzkách
 

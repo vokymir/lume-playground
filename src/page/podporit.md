@@ -1,5 +1,6 @@
 ---
 title: Podpořit
+id: jak_podporit
 ---
 ## Děkujeme, že zvažujete podporu
 

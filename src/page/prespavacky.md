@@ -1,5 +1,6 @@
 ---
 title: Přespávačky
+id: prespavacky
 ---
 
 ## O přespávačkách

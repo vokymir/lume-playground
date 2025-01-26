@@ -1,5 +1,6 @@
 ---
 title: O nás
+id: about_us
 ---
 ## Royal Rangers v ČR
 
