@@ -3,6 +3,8 @@ I created this project to try out [Deno's](https://deno.com/) static web generat
 In the process it became clear to me that it's an awesome tool I want to build at least one website with. 
 Therefore it is no more a playground, more like repo for our [Royal Rangers](https://www.royalrangers.cz/) outpost. I hope to achieve nice looking, easy-to-manage website.
 
+> Check out the current main branch website version on https://vokymir.github.io/lume-playground/
+
 # I am using
 - [Deno](https://deno.com/) just to run Lume
 - [Lume](https://lume.land/) to build the website
