@@ -1,12 +1,17 @@
-<a href="{{ page.url }}" class="card">
-  <article>
+<a href="{{ page.url }}" class="card" style="--pico-text-decoration: none; text-decoration: none; --pico-color: var(--pico-h2-color);">
+  <article >
+    {{ if page.img }}
+    <img src="{{ page.img }}" alt="{{ page.title }}" style="height: 200px; width: 100%; object-fit: cover; margin-bottom: var(--pico-block-spacing-vertical);">
+    {{ /if }}
     <header>
       <h3>{{ page.title }}</h3>
     </header>
-    <img src="{{ page.featured_img }}" alt="{{ page.title }}" width=200>
+     <p> {{ page.type }} </p>
     <footer>
     {{ if page.type == "camp" }}
       <p>{{ page.date_start |> date("PPP") }} - {{ page.date_end |> date("PPP") }}</p>
+    {{ else }}
+       <p>{{ page.date |> date("PPP") }}</p> 
     {{ /if }}
     </footer>
   </article>
