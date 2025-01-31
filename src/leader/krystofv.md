@@ -1,7 +1,7 @@
 ---
 id: krystofv
 
-name: Kryštof V.
+title: Kryštof V.
 role: Hlavní vedoucí
 img: https://prestice.royalrangers.cz/wp-content/uploads/krystof_V.png
 

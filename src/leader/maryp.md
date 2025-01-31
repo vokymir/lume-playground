@@ -1,4 +1,4 @@
 ---
 id: maryp
-name: Marijánka P.
+title: Marijánka P.
 ---
