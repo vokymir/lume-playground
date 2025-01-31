@@ -79,6 +79,7 @@ than: https://jsbin.com/wasarok/edit?html,css,output
 [data-role="burger"] > input[type="checkbox"]:checked {
 	background-image: none;
 	background-color: transparent;
+  box-shadow: none;
 }
 
 [data-role="burger"] > input[type="checkbox"]::before, [data-role="burger"] > input[type="checkbox"]::after {
@@ -100,13 +101,17 @@ than: https://jsbin.com/wasarok/edit?html,css,output
 	top: 10px;
 }
 
-[data-role="burger"] > input[type="checkbox"]:checked::before {
+[data-role="burger"] > input[type="checkbox"]:checked::before,
+[data-role="burger"] > input[type="checkbox"]:checked::after{
   box-shadow: none;
+  background-color: var(--pico-color);
+}
+
+[data-role="burger"] > input[type="checkbox"]:checked::before {
   transform: rotate(45deg) translate(7px, 7px);
 }
 
 [data-role="burger"] > input[type="checkbox"]:checked::after {
-  box-shadow: none;
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
