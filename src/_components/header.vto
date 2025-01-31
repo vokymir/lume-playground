@@ -57,7 +57,7 @@
       {{ else }}
         {{ for page of search.pages() }}
           {{ if page.type == item.type && page.id == item.id }}
-            <li><a href="{{ page.url }}">{{ item.message || page.title }}</a></li>
+            <li ><a href="{{ page.url }}" {{if item.cta }} role="button" {{ else }} style="margin-bottom: 0;" {{ /if }} {{# if is CTA, look like button. if not, be aligned as one. #}}>{{ item.message || page.title }}</a></li>
           {{ /if }}
         {{ /for }}
       {{ /if }}
