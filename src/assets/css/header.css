@@ -32,20 +32,6 @@
   }
 
 /*
-THEME SWITCHER
-*/
-
-  #theme-switcher {
-    padding: 0.5rem;
-    margin: -0.5rem;
-    line-height: 1;
-  }
-
-  #theme-switcher:hover {
-    opacity: 0.8;
-  }
-
-/*
 RESPONSIVE MENU
 goto: https://github.com/picocss/pico/discussions/343
 than: https://jsbin.com/wasarok/edit?html,css,output
