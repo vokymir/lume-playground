@@ -1,6 +1,6 @@
 ---
 id: kubav
-name: Kuba V.
+title: Kuba V.
 leader_id: kubav 
 ---
 

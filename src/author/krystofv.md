@@ -1,6 +1,6 @@
 ---
 id: krystofv
-name: Kryštof V.
+title: Kryštof V.
 leader_id: krystofv
 ---
 
