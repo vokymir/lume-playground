@@ -26,5 +26,5 @@ document.getElementById('search-trigger').onclick = function() {
 
   // Set initial theme from localStorage or system preference
   const savedTheme = localStorage.getItem('theme') || 
-    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    (globalThis.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   document.documentElement.setAttribute('data-theme', savedTheme);

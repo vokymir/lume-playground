@@ -48,10 +48,125 @@ THEME SWITCHER
 /*
 RESPONSIVE MENU
 goto: https://github.com/picocss/pico/discussions/343
+than: https://jsbin.com/wasarok/edit?html,css,output
 */
-@media (max-width: 768px){
-  :where(menu,[role=menu]){
-    display: flex;
-    flex-direction: column;
+
+:where(menu, [role="menu"]),
+:where(menu, [role="menu"]) > [role="menuitem"] {
+	display: flex;
+  flex-direction: column;
+	position: relative;
+}
+
+@media (min-width: 768px){
+  :where(menu, [role="menu"]),
+	:where(menu, [role="menu"]) > [role="menuitem"]{
+    flex-direction: row;
   }
+}
+
+/* burger */
+[data-role="burger"] {
+	opacity: 0.8;
+  cursor: pointer;
+  border-radius: 10%;
+  box-sizing: border-box;
+  background-color: transparent;
+  height: 24px;
+  width: 28px;
+  padding: 0;
+	margin: 0;
+  border: 0 solid #e7edf2;
+}
+
+[data-role="burger"] > input[type="checkbox"] {
+	height: 4px;
+  width: 28px;
+	border: none;
+  background-color: #e7edf2;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 4px 0 #161724;
+	position: relative;
+	margin-inline: 0;
+}
+
+[data-role="burger"] > input[type="checkbox"]:checked {
+	background-image: none;
+	background-color: transparent;
+}
+
+[data-role="burger"] > input[type="checkbox"]::before, [data-role="burger"] > input[type="checkbox"]::after {
+	height: 4px;
+  width: 28px;
+  border-radius: 2px;
+	background-color: #e7edf2;
+  position: absolute;
+  content: "";
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 4px 0 #161724;
+}
+
+[data-role="burger"] > input[type="checkbox"]::before {
+	top: -10px;
+}
+
+[data-role="burger"] > input[type="checkbox"]::after {
+	top: 10px;
+}
+
+[data-role="burger"] > input[type="checkbox"]:checked::before {
+  box-shadow: none;
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+[data-role="burger"] > input[type="checkbox"]:checked::after {
+  box-shadow: none;
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* css toggle*/
+/* adjust menu for toggling */
+:where(menu, [role="menu"]) {
+	position: relative; /* anchor for children */
+	/* needed otherwise it grows to fit all its children */
+	max-height: calc(var(--pico-line-height) * 1em + var(--pico-nav-element-spacing-vertical)*2);
+}
+
+/* hide entries within menu */
+:where(menu, [role="menu"]) > [role="menuitem"] {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+	position: relative;
+  background-color: var(--pico-card-background-color);
+}
+
+/* show hidden items when burger is checked :D */
+:where(menu, [role="menu"]):has(> label > input[type="checkbox"]:checked) > [role="menuitem"] {
+  visibility: visible;
+  opacity: 1;
+	z-index: 9999;
+}
+
+/* position the menu button */
+:where(menu, [role="menu"]) > label {
+  position: absolute;
+  right: var(--pico-nav-element-spacing-horizontal);
+  top: var(--pico-nav-element-spacing-vertical);
+	padding: var(--pico-nav-element-spacing-vertical) var(--pico-nav-element-spacing-horizontal);
+}
+
+@media (min-width: 768px) {
+	/* hide menu button */
+  :where(menu, nav[role="menu"]) > label[data-role="burger"] {
+    display: none;
+  }
+
+		/* show all elements */
+	:where(menu, [role="menu"]) > [role="menuitem"] {
+		visibility: visible;
+    opacity: 1;
+		display: flex;
+		top: unset;
+	}
 }

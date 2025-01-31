@@ -1,10 +1,10 @@
 <header>
-<nav class="container-fluid">
-  <ul>
+<nav class="container-fluid" role="menu">
+  <ul role="menubar">
+  <!-- Site title -->
     <li><strong> <a href="{{ "/" |> url }}"> {{ site.title || "My Site" }} </a> </strong></li>
-  </ul>
- <!-- Search --> 
-    <button 
+  <!-- Search --> 
+    <li role="button"
           id="search-trigger"
           aria-label="Search"
         >
@@ -23,15 +23,19 @@
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
-        </button>
+        </li>
     <div id="search-overlay" style="display: none;">
         <div id="search"></div>
     </div>
 
-  <!-- Navigation --->
-  <ul>
-  <menu role="menu">
+  </ul>
+
+<!-- Navigation --->
+  <label data-role="burger"><input type="checkbox" /></label>
+  <ul role="menuitem">
+
    {{ for item of menu.header }}
+    <!-- Nested items -->
       {{ if item.nest }}
         <li> <!-- Uses PICO default styling -->
           <details class="dropdown">
@@ -49,6 +53,7 @@
           </ul>
           </details>
         </li>
+    <!-- Normal items -->
       {{ else }}
         {{ for page of search.pages() }}
           {{ if page.type == item.type && page.id == item.id }}
@@ -57,7 +62,7 @@
         {{ /for }}
       {{ /if }}
     {{ /for }}
-    </menu>
+<!-- Theme switcher -->
     <li>
       <a href="#" role="button" id="theme-switcher">
        <svg 
@@ -76,6 +81,7 @@
         </svg>
       </a>
     </li>
+
   </ul>
 </nav>
 
