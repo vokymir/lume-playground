@@ -1,6 +1,13 @@
-<a href={{ page.url }}>
-<h3> {{ page.title }} </h3>
-{{ if page.type == "camp" }}
-<p> {{ page.date_start |> date("PPP") }} - {{ page.date_end |> date("PPP") }}  </p>
-{{ /if }}
+<a href="{{ page.url }}" class="card">
+  <article>
+    <header>
+      <h3>{{ page.title }}</h3>
+    </header>
+    <img src="{{ page.featured_img }}" alt="{{ page.title }}" width=200>
+    <footer>
+    {{ if page.type == "camp" }}
+      <p>{{ page.date_start |> date("PPP") }} - {{ page.date_end |> date("PPP") }}</p>
+    {{ /if }}
+    </footer>
+  </article>
 </a>
