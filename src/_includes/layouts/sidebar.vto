@@ -6,6 +6,7 @@ layout: layouts/base.vto
     <div class="sidebar-grid">
         <!-- Sidebar -->
         <aside class="sidebar">
+            <h3>Obsah</h3>
             {{ include "templates/sidebar.vto" }}
         </aside>
 
@@ -28,7 +29,6 @@ layout: layouts/base.vto
         top: 1rem; /* Adjust this value to control how far from the top the sidebar sticks */
         align-self: start; /* Ensures the sidebar doesn't stretch to match the content height */
         height: 100vh; /* Full viewport height */
-        overflow-y: auto; /* Adds scroll if the sidebar content is too tall */
     }
 
     @media (max-width: 768px) {
