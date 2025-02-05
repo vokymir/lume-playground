@@ -1,15 +1,44 @@
 ---
-title: Sidebar on right layout, two columns.
+title: Sidebar Layout
 layout: layouts/base.vto
 ---
-
 <main class="container">
-    <div class="row">
-        <div class="col-8">
+    <div class="sidebar-grid">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            {{ include "templates/sidebar.vto" }}
+        </aside>
+
+        <!-- Main Content -->
+        <section class="content">
             {{ content }}
-        </div>
-        <div class="col-4">
-            {{ comp.sidebar() }}
-        </div>
+        </section>
     </div>
 </main>
+
+<style>
+    .sidebar-grid {
+        display: grid;
+        grid-template-columns: 1fr 3fr; /* Sidebar takes 1 part, content takes 3 parts */
+        gap: 1rem; /* Space between sidebar and content */
+    }
+
+    .sidebar {
+        position: sticky;
+        top: 1rem; /* Adjust this value to control how far from the top the sidebar sticks */
+        align-self: start; /* Ensures the sidebar doesn't stretch to match the content height */
+        height: 100vh; /* Full viewport height */
+        overflow-y: auto; /* Adds scroll if the sidebar content is too tall */
+    }
+
+    @media (max-width: 768px) {
+        .sidebar-grid {
+            grid-template-columns: 1fr; /* Stack sidebar and content on smaller screens */
+        }
+
+        .sidebar {
+            position: static; /* Disable sticky behavior on smaller screens */
+            height: auto; /* Reset height */
+        }
+    }
+</style>
