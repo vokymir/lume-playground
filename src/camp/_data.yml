@@ -5,7 +5,7 @@ layout: layouts/camp.vto
 # featured image fallback
 img: https://prestice.royalrangers.cz/wp-content/uploads/tabory-fallback.jpg
 # gallery fallback
-gallery_url: https://eu.zonerama.com/prrestice/1402979
+gallery: https://eu.zonerama.com/prrestice/1402979
 # type of sleeping mode on camp, don't change id's
 camp_type:
   - id: prim

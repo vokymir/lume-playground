@@ -10,9 +10,12 @@ date_end: 2025-07-25
 
 leader_id: [krystofv, kubav] # first for camp leader, second for contacting
 author_id: kubav
+sranda: >
+    pisoooo\n<br/>
+    tady si neco
 ---
 # content
-
+{{ sranda }}
 sdf
 
 ## huraaah
