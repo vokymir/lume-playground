@@ -11,3 +11,13 @@
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: var(--pico-spacing); 
 }
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    text-decoration: none;
+    color: inherit;
+}

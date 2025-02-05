@@ -16,6 +16,7 @@ const markdown = {
     plugins: [toc],
     options: {
       linkify: true,
+      breaks: true,
     },
   };
 
