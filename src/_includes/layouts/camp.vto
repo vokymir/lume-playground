@@ -1,41 +1,64 @@
 ---
+title: {{ title }}
 layout: layouts/sidebar.vto
 templateEngine: ["vto", "md"]
 ---
-featured image:
-<img src="{{img}}" width="200" />
+<article class="camp">
+    <header>
+        <h1>{{ title }}</h1>
+        <p><strong>Datum:</strong> {{ date_start |> date("HUMAN_DATE") }} - {{ date_end |> date("HUMAN_DATE") }}</p>
+        <p><strong>Cena:</strong> {{ price }} Kč</p>
+        <p><strong>Typ:</strong> {{ sleep_type }}</p>
+    </header>
 
-this is the title: {{title }}
+    <figure>
+        <img src="{{ img }}" alt="Obrázek tábora {{ title }}" class="camp-image">
+    </figure>
 
-date of added: {{ date }}
+    <section class="leaders">
+        <p><strong>Hlavní vedoucí:</strong> {{ comp.find_info({what:leader_id[0]}) }}</p>
+        <p><strong>Kontakt:</strong> {{ leader_id[1] }}</p>
+    </section>
 
-Who is the base leader:
-{{ comp.find_info({what:site.base_leader})}}
+    {{ if gallery }}
+    <section class="gallery">
+        <a href="{{ gallery }}" target="_blank" rel="noopener">Fotogalerie</a>
+    </section>
+    {{ /if }}
 
-Who is the camp leader:
-{{ leader[0].title}} <img src="{{leader[0].img}}" width="50" />
+    <section class="camp-content">
+        {{ content }}
+    </section>
+</article>
 
-Who is the camp leader to be contacted:
-{{ leader[1].name}} ({{leader[1].full_name}}): {{leader[1].email}} / {{leader[1].tel}}
+<style>
+    .camp {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
 
-Camp (sleep) type:
-{{ for ct of camp_type}}
-    {{ if ct.id == sleep_type}}
-        {{echo ct.name}}
-    {{/if}}
-{{/for}}
+    .camp-image {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
 
-Price: {{ price}} Kc
+    .leaders p {
+        margin: 0;
+    }
 
-[Gallery]( {{gallery_url}} )
+    .gallery a {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background-color: var(--primary);
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
 
-Date of start:
-{{ date_start |> date("HUMAN_DATE") }}
-
-Date of end:
-{{ date_end |> date("HUMAN_DATE") }}
-
-author:
-{{ author.title }}
-
-{{ content }}
+    .gallery a:hover {
+        background-color: var(--primary-hover);
+    }
+</style>
