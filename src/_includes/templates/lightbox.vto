@@ -1,0 +1,14 @@
+<figure class="lightbox-container">
+    <img src="{{ img }}" alt="Obrázek tábora {{ title }}" class="camp-image" data-id="{{ img | slugify }}">
+    
+    <dialog id="lightbox-{{ img | slugify }}" class="modal">
+        <article>
+            <header>
+                <button class="close" aria-label="Zavřít"></button>
+            </header>
+            <img src="{{ img }}" alt="Obrázek tábora {{ title }}">
+        </article>
+    </dialog>
+</figure>
+
+<script type="text/javascript" src="/assets/js/lightbox.js"></script>

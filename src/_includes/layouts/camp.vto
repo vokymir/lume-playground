@@ -1,7 +1,7 @@
 ---
 title: {{ title }}
 layout: layouts/sidebar.vto
-templateEngine: ["vto", "md"]
+templateEngine: "vto"
 ---
 <article class="camp">
     <header>
@@ -11,10 +11,16 @@ templateEngine: ["vto", "md"]
         <p><strong>Typ:</strong> {{ sleep_type }}</p>
     </header>
 
-    <figure>
-        <img src="{{ img }}" alt="Obrázek tábora {{ title }}" class="camp-image">
-    </figure>
+    {{ set img_class = "camp-image"}}
+    {{ set img_src}}
+        {{ img }}
+    {{/set}}
+    {{ set img_alt }}
+        Obrázek tábora {{ title }}
+    {{/set}}
 
+    {{ include "templates/lightbox.vto" }}
+        
     <section class="leaders">
         <p><strong>Hlavní vedoucí:</strong> {{ comp.find_info({what:leader_id[0]}) }}</p>
         <p><strong>Kontakt:</strong> {{ leader_id[1] }}</p>
