@@ -1,6 +1,7 @@
 ---
 id: narnie2025
 title: Příměstský tábor Narnie 2025
+img: https://prestice.royalrangers.cz/wp-content/uploads/larp_2024.jpg
 
 sleep_type: prim
 price: 1000
