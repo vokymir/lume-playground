@@ -12,3 +12,20 @@
 </figure>
 
 <script type="text/javascript" src="/assets/js/lightbox.js"></script>
+
+<style>
+    /* Lightbox Hover Effect */
+    .lightbox-container img {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    /* Hover effect for normal image display */
+    .lightbox-container img:hover {
+        transform: scale(1.05);
+    }
+
+    /* Disable hover effect when the modal is open */
+    .modal-is-open .lightbox-container img:hover {
+        transform: none;
+    }
+</style>

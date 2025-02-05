@@ -20,7 +20,7 @@ templateEngine: "vto"
     {{/set}}
 
     {{ include "templates/lightbox.vto" }}
-        
+
     <section class="leaders">
         <p><strong>Hlavní vedoucí:</strong> {{ comp.find_info({what:leader_id[0]}) }}</p>
         <p><strong>Kontakt:</strong> {{ leader_id[1] }}</p>
@@ -35,36 +35,9 @@ templateEngine: "vto"
     <section class="camp-content">
         {{ content }}
     </section>
+
+    <footer class="camp-footer">
+        <p><strong>Autor:</strong> {{ comp.find_info({what:author_id}) }}</p>
+        <p><strong>Datum zveřejnění:</strong> {{ date |> date("HUMAN_DATE") }}</p>
+    </footer>
 </article>
-
-<style>
-    .camp {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .camp-image {
-        width: 100%;
-        max-height: 400px;
-        object-fit: cover;
-        border-radius: 8px;
-    }
-
-    .leaders p {
-        margin: 0;
-    }
-
-    .gallery a {
-        display: inline-block;
-        padding: 0.5rem 1rem;
-        background-color: var(--primary);
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-    }
-
-    .gallery a:hover {
-        background-color: var(--primary-hover);
-    }
-</style>

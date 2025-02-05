@@ -1,0 +1,30 @@
+
+    .camp {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .camp-image {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .leaders p {
+        margin: 0;
+    }
+
+    .gallery a {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background-color: var(--primary);
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .gallery a:hover {
+        background-color: var(--primary-hover);
+    }
