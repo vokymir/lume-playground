@@ -10,11 +10,21 @@ import sitemap from "lume/plugins/sitemap.ts";
 import checkUrls from "lume/plugins/check_urls.ts";
 import lightningCss from "lume/plugins/lightningcss.ts"
 import esbuild from "lume/plugins/esbuild.ts";
+import toc from "https://deno.land/x/lume_markdown_plugins@v0.8.0/toc/mod.ts";
+
+const markdown = {
+    plugins: [toc],
+    options: {
+      linkify: true,
+    },
+  };
 
 const site = lume({
     src: "src", // the root folder for site
     location: new URL("https://vokymir.github.io/lume-playground/"), // if gonna live in subfolder
-});
+    },
+    { markdown }
+);
 
 
 // Every MD file accepts VTO variables.
@@ -58,7 +68,8 @@ site.use(basePath()) // prepends site.location from above to paths
         external: false, // set it to true occasionally to check for broken external links - slows the build down a lot
     }))
     .use(lightningCss())
-    .use(esbuild());
+    .use(esbuild())
+    ;
 
 // Don't create pages for these.
 site.ignore("/assets/css/pico-main/LICENSE.md", "/assets/css/pico-main/README.md");
