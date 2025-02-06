@@ -2,7 +2,7 @@
 layout: layouts/base.vto
 ---
 
-<section class="hero">
+<section class="hero" transform-images="avif webp png jpg">
   <div class="hero-images">
     {{ for image of hero_images }}
       <div class="hero-image">
@@ -10,6 +10,7 @@ layout: layouts/base.vto
         <div class="mask"></div>
       </div>
     {{ /for }}
+    <img src="/assets/img/royal-rangers-logo.png" alt="Royal Rangers logo" id="logo-in-hero">
   </div>
 </section>
 
@@ -37,6 +38,7 @@ layout: layouts/base.vto
 .hero-images {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .hero-image {
@@ -58,6 +60,15 @@ layout: layouts/base.vto
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
+}
+
+#logo-in-hero{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  transform: translate(-50%, -50%);
 }
 
 /* Stats section: cards in a flexible container */
