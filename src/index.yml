@@ -1,0 +1,19 @@
+title: Royal Rangers Přeštice
+layout: layouts/homepage.vto
+
+# Data for the hero images, stats and CTAs can be adjusted
+hero_images:
+  - "/assets/img/groups/rr-2024.jpg"
+  - "/assets/img/groups/rr-2024.jpg"
+stats:
+  - title: "Members"
+    count: 150
+  - title: "Leaders"
+    count: 10
+  - title: Camps
+    count: 30
+cta:
+  - label: "Schuzky"
+    url: "/page/schuzky"
+  - label: "Tabory"
+    url: "/page/tabory"
