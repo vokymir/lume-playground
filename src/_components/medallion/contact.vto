@@ -1,0 +1,13 @@
+{{# Needs the variable 'contact' to exist and to have 'full_name', 'tel' and 'email' defined. #}}
+
+{{ if !contact }}
+    {{ contact = {full_name: "Kryštof Veselovský", tel: "604415559", email:"royal.rangers@kcentrum.eu"} }}
+{{ /if }}
+
+{{ contact.full_name || contact.title }}
+{{ if contact.tel }}
+    <br/> Tel: {{ contact.tel }}
+{{ /if }}
+{{ if contact.email }}
+    <br/> Email: {{ contact.email }}
+{{ /if }}

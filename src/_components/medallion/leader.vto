@@ -1,0 +1,7 @@
+{{# Requires 'lead' to be defined. #}}
+
+{{ if !lead }}
+    {{  lead = {title: "Kryštof Veselovský"} }}
+{{ /if }}
+
+{{ lead.title }}

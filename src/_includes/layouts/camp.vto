@@ -22,8 +22,8 @@ templateEngine: "vto"
     {{ include "templates/lightbox.vto" }}
 
     <section class="leaders">
-        <p><strong>Hlavní vedoucí:</strong> {{ leader[0].title }}</p>
-        <p><strong>Kontakt:</strong> {{ leader[1].title }}</p>
+        <p><strong>Hlavní vedoucí:</strong> {{ comp.medallion.leader({lead: leader[0]}) }}</p>
+        <p><strong>Kontakt:</strong> {{ comp.medallion.contact({contact: leader[1]})}}</p>
     </section>
 
     {{ if gallery }}
@@ -37,7 +37,7 @@ templateEngine: "vto"
     </section>
 
     <footer class="camp-footer">
-        <p><strong>Autor:</strong> {{ include "templates/medallion/author.vto" }}</p>
+        <p><strong>Autor:</strong> {{ comp.medallion.author({author: author}) }}</p>
         <p><strong>Datum zveřejnění:</strong> {{ date |> date("HUMAN_DATE") }}</p>
     </footer>
 </article>
