@@ -11,6 +11,8 @@ import checkUrls from "lume/plugins/check_urls.ts";
 import lightningCss from "lume/plugins/lightningcss.ts"
 import esbuild from "lume/plugins/esbuild.ts";
 import toc from "https://deno.land/x/lume_markdown_plugins@v0.8.0/toc/mod.ts";
+import picture from "lume/plugins/picture.ts";
+import transformImages from "lume/plugins/transform_images.ts";
 
 const markdown = {
     plugins: [toc],
@@ -70,6 +72,8 @@ site.use(basePath()) // prepends site.location from above to paths
     }))
     .use(lightningCss())
     .use(esbuild())
+    .use(picture())
+    .use(transformImages())
     ;
 
 // Don't create pages for these.
