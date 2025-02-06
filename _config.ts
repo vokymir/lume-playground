@@ -14,6 +14,7 @@ import toc from "https://deno.land/x/lume_markdown_plugins@v0.8.0/toc/mod.ts";
 import picture from "lume/plugins/picture.ts";
 import transformImages from "lume/plugins/transform_images.ts";
 import favicon from "lume/plugins/favicon.ts";
+import relativeUrls from "lume/plugins/relative_urls.ts";
 
 const markdown = {
     plugins: [toc],
@@ -77,6 +78,9 @@ site.use(basePath()) // prepends site.location from above to paths
     .use(transformImages())
     .use(favicon({
         input: "assets/img/royal-rangers-logo.svg"
+    }))
+    .use(relativeUrls({
+        extensions: [".html", ".vto", ".md", ".png"]
     }))
     ;
 
