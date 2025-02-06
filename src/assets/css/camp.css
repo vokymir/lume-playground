@@ -11,21 +11,9 @@
         object-fit: cover;
         object-position: center top;
         border-radius: 8px;
+        cursor: pointer;
     }
 
     .leaders p {
         margin: 0;
-    }
-
-    .gallery a {
-        display: inline-block;
-        padding: 0.5rem 1rem;
-        background-color: var(--primary);
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-    }
-
-    .gallery a:hover {
-        background-color: var(--primary-hover);
     }
