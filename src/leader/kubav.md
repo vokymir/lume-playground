@@ -1,8 +1,7 @@
 ---
 id: kubav
 title: Kuba V.
-img: https://prestice.royalrangers.cz/wp-content/uploads/Kuba_V.png
+img: /assets/img/leaders/vedouci-KUBA.jpg
 tel: 777404693
 full_name: Jakub Vokoun
 ---
-To jsem ja.

@@ -3,10 +3,13 @@ id: krystofv
 
 title: Kryštof V.
 role: Hlavní vedoucí
-img: https://prestice.royalrangers.cz/wp-content/uploads/krystof_V.png
+img: /assets/img/leaders/velitel-KRYSTOF-2.jpg
+
 
 # contact
 tel: 604415559
 full_name: Kryštof Veselovský
 ---
 Něco málo o mě...
+
+<img src="{{ img }}">
