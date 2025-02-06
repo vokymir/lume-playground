@@ -1,29 +1,18 @@
 ---
-id: narnie2025
-title: Příměstský tábor Narnie 2025
+id: narnie-07-2025
+title: "Narnie: Poslední bitva" 
 img: https://prestice.royalrangers.cz/wp-content/uploads/larp_2024.jpg
 
 sleep_type: prim
 price: 1000
+gallery: ""
 
 date_start: 2025-07-21 
 date_end: 2025-07-25 
 
-leader_id: [krystofv, kubav] # first for camp leader, second for contacting
+leader_id: [anezkav, krystofv] # first for camp leader, second for contacting
 author_id: kubav
-sranda: >
-    pisoooo\n<br/>
-    tady si neco
 ---
-# content
-{{ sranda }}
-sdf
-
-## huraaah
-
-asdf
-
-## dva
-
-## tri
-## atd
+## Informace před táborem
+Příměstský tábor pro děti 6-15 let bude probíhat na evangelické faře v Přešticích.
+> Další informace ještě upřesníme.
