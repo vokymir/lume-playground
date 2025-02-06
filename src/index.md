@@ -1,8 +1,6 @@
 ---
-title: Hello title!
+title: Royal Rangers Přeštice
 ---
-# Hello world
-This is the beginning of something great! This is the title: {{ title }}
 
 <div class="grid">
 {{ for pg of search.pages()}}
