@@ -12,4 +12,4 @@ full_name: Kryštof Veselovský
 ---
 Něco málo o mě...
 
-<img src="{{ img }}">
+<img src="{{ img }}" transform-images="avif webp png 300@2">
